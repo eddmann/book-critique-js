@@ -1,0 +1,40 @@
+mixin rating(book, number)
+  - if (book.rating == number)
+    a(class='r' + number + ' selected')
+      span #{number}
+  - else
+    a(class='r' + number)
+      span #{number}
+
+!!! 5
+html
+  head
+    title Book Critique
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js')
+    script(src='/javascripts/dialog.js')
+    script(src='/javascripts/application.js')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div#content
+      header
+        h1 book critique.
+        nav
+          a#add-book-button.blue.button Add Book
+        div.clear
+      div#books
+        each book in books
+          div.book(data-id=book.id)
+            img(src='../images/books/#{book.image}')
+            div.review
+              mixin rating(book, 1)
+              mixin rating(book, 2)
+              mixin rating(book, 3)
+              mixin rating(book, 4)
+              mixin rating(book, 5)
+      div.clear
+      footer created by edd.
+  script#add-book(type='text/template')
+    div#drop
+    a#upload-button.button Upload
+  
+  div#overlay.hide

@@ -1,0 +1,34 @@
+@import url(http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911); 
+body,html,div,img,label,p,h1,h2,h3,h4,ul,ol,li,form,a,th,td{border:0;outline:none;margin:0;padding:0}
+ul,ol{list-style:none}
+img{border:0}
+a{text-decoration:none;color:#ffffff}
+.clear{content:".";display:block;height:0;clear:both;visibility:hidden}
+body{background:url("../images/bg.png") #191919;font:14px Arial,Helvetica,"Helvetica Neue",Verdana,sans-serif;color:#fff}
+#content{width:700px;margin:50px auto;}
+#content header{width:700px;margin-bottom:30px;}
+#content header h1{font:50px "Goudy Bookletter 1911",serif;font-weight:100;letter-spacing:1px;float:left}
+#content header nav{margin-top:20px;float:right}
+#content #books{margin:30px 0;}
+#content #books .book{margin:0 50px 40px 0;float:left;}
+#content #books .book:nth-child(3n){margin:0 0 40px 0}
+#content #books .book img{border:10px solid #191919;width:180px;margin-bottom:15px;}
+#content #books .book img:hover{border:10px solid #3a3a3a}
+#content #books .book a{-moz-border-radius:40px;-webkit-border-radius:40px;width:20px;height:18px;display:block;float:left;margin-left:15px;text-align:center;padding-top:3px;}
+#content #books .book a:first-child{margin-left:20px}
+#content #books .book a:hover{cursor:pointer}
+#content #books .book a.r1.selected,#content #books .book a.r1:hover{background:#710101}
+#content #books .book a.r2.selected,#content #books .book a.r2:hover{background:#995365}
+#content #books .book a.r3.selected,#content #books .book a.r3:hover{background:#3ca656}
+#content #books .book a.r4.selected,#content #books .book a.r4:hover{background:#b9ab7b}
+#content #books .book a.r5.selected,#content #books .book a.r5:hover{background:#ff73a4}
+#content footer{margin-top:30px;text-align:center;letter-spacing:1px;color:#757575}
+#overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.80);z-index:500;transition:opacity .3s;opacity:1;visibility:visible;}
+#overlay.hide{opacity:0;visibility:hidden}
+#dialog{color:#000;position:fixed;padding:5px 10px;background:#fff;border-radius:5px;box-shadow:0 0 50px rgba(0,0,0,0.40);z-index:1000;text-align:center;visibility:visible;opacity:1;padding:15px;}
+#dialog #drop{height:236px;width:180px;border:3px dashed #ccc;padding:10px;margin-bottom:15px;background:url("../images/upload.png") no-repeat center}
+.button,.button:visited{background:#222 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAyCAYAAACd+7GKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAClJREFUeNpi/v//vwMTAwPDfzjBgMpFI/7hFSOT9Y8qRuF3JLoHAQIMAHYtMmRA+CugAAAAAElFTkSuQmCC) repeat-x;display:inline-block;font-size:14px;padding: 8px 14px 9px;color:#fff;text-decoration:none;-moz-border-radius:5px;-webkit-border-radius:5px;-moz-box-shadow:0 1px 3px rgba(0,0,0,0.5);-webkit-box-shadow:0 1px 3px rgba(0,0,0,0.5);text-shadow:0 -1px 1px rgba(0,0,0,0.25);border-bottom:1px solid rgba(0,0,0,0.25);position:relative;cursor:pointer}
+.button:hover{background-color:#111;color:#fff}
+.button:active{top:1px}
+.blue.button,.blue.button:visited{background-color:#2daebf;}
+.blue.button:hover{background-color:#007d9a;}
